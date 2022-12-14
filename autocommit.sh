@@ -28,7 +28,7 @@ fluidd_folder=~/fluidd
 #####################################################################
 grab_version() {
   local klipper_commit moonraker_commit
-  local mainsail_ver fluidd_ver
+  local fluidd_ver
 
   if [ -n ${klipper_folder} ]; then
     cd "${klipper_folder}"
