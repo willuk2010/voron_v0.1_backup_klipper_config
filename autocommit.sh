@@ -30,21 +30,21 @@ grab_version() {
   local klipper_commit moonraker_commit
   local mainsail_ver fluidd_ver
 
-  if [[ -n ${klipper_folder} ]]; then
+  if [ -n ${klipper_folder} ]; then
     cd "${klipper_folder}"
     klipper_commit=$(git rev-parse --short=7 HEAD)
     m1="Klipper on commit: ${klipper_commit}"
   fi
-  if [[ -n ${moonraker_folder} ]]; then
+  if [ -n ${moonraker_folder} ]; then
     cd "${moonraker_folder}"
     moonraker_commit=$(git rev-parse --short=7 HEAD)
     m2="Moonraker on commit: ${moonraker_commit}"
   fi
-  if [[ -n ${mainsail_folder} ]]; then
+  if [ -n ${mainsail_folder} ]; then
     mainsail_ver=$(head -n 1 "${mainsail_folder}/.version")
     m3="Mainsail version: ${mainsail_ver}"
   fi
-  if [[ -n ${fluidd_folder} ]]; then
+  if [ -n ${fluidd_folder} ]; then
     fluidd_ver=$(head -n 1 "${fluidd_folder}/.version")
     m4="Fluidd version: ${fluidd_ver}"
   fi
